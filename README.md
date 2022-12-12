@@ -1,4 +1,4 @@
-> :warning: **This Webhook Connector can use only Incident Stream for now**:
+> :warning: **This Webhook Connector can use only Incident Stream for now**
 
 # Installation steps
 
@@ -22,9 +22,9 @@
 | CONNECTOR_ID                          | UUIv4 of this connector, it must be unique                                            | Yes       |
 | CONNECTOR_TYPE                        | Must be STREAM (this is the connector type).                                          | Yes       |
 | CONNECTOR_LIVE_STREAM_ID              | From the newly created Incident Stream (See installation steps)                       | Yes       |
-| CONNECTOR_LIVE_STREAM_WITH_INFERENCES | Fetch incident from the rules engine                                                  | Yes       |
+| CONNECTOR_LIVE_STREAM_WITH_INFERENCES | Fetch incidents created by the rules engine                                           | Yes       |
 | CONNECTOR_LIVE_STREAM_LISTEN_DELETE   | Fetch delete events                                                                   | Yes       |
-| CONNECTOR_LIVE_STREAM_NO_DEPENDENCIES | Fetch incident without any relations                                                  | Yes       |
+| CONNECTOR_LIVE_STREAM_NO_DEPENDENCIES |                                                                                       | Yes       |
 | CONNECTOR_NAME                        | The name of this webhook connector instance                                           | Yes       |
 | CONNECTOR_SCOPE                       | Must be `Incident`, not used in this connector                                        | Yes       |
 | CONNECTOR_LOG_LEVEL                   | The log level for this connector, could be `debug`, `info`, `warn` or `error` (less verbose). | No        |
