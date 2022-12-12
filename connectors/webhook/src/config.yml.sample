@@ -1,0 +1,25 @@
+connector:
+  id: "7bbb6d3e-0f73-45f6-9755-0e2bc4cefa5d"
+  type: "STREAM"
+  live_stream_id: ""
+  live_stream_listen_delete: false
+  live_stream_with_inferences: true
+  live_stream_no_dependencies: true
+  #live_stream_start_timestamp: "1659304800000"
+  name: "Webhook Events"
+  scope: "Incident" # MIME type or SCO ???
+  confidence_level: 100 # From 0 (Unknown) to 100 (Fully trusted)
+  log_level: "info"
+
+opencti:
+  url: ""
+  token: ""
+  json_logging: "true"
+  ssl_verify: false
+
+webhook:
+  url: ""
+  username: ""
+  password: ""
+  ssl_verify: false
+  log_events: false # for debug purpose 

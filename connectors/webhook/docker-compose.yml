@@ -1,0 +1,29 @@
+version: '3'
+services:
+  connector-webhook:
+    image: connector-webhook:latest
+    build: .
+    environment:
+      - OPENCTI_URL=
+      - OPENCTI_TOKEN=ChangeMe
+      - OPENCTI_JSON_LOGGING=true
+      - CONNECTOR_ID=7bbb6d3e-0f73-45f6-9755-0e2bc4cefa5d
+      - CONNECTOR_TYPE=STREAM
+      - CONNECTOR_LIVE_STREAM_ID=
+      - CONNECTOR_LIVE_STREAM_WITH_INFERENCES=true
+      - CONNECTOR_LIVE_STREAM_LISTEN_DELETE=true
+      - CONNECTOR_LIVE_STREAM_NO_DEPENDENCIES=true
+      - CONNECTOR_NAME=Webhook Events
+      - CONNECTOR_SCOPE=Incident # MIME type or Stix Object
+      - CONNECTOR_CONFIDENCE_LEVEL=100 # From 0 (Unknown) to 100 (Fully trusted)
+      - CONNECTOR_LOG_LEVEL=info
+      - WEBHOOK_URL=
+      - WEBHOOK_USERNAME=
+      - WEBHOOK_PASSWORD=
+      - WEBHOOK_SSL_VERIFY=true
+      #- WEBHOOK_SSL_VERIFY=/opt/opencti-connector-webhook/ca_bundle.pem
+      - WEBHOOK_LOG_EVENTS=false
+    restart: always
+    volumes:
+      - "./logs:/opt/opencti-connector-webhook/logs"
+      #- "/opt/opencti/ca_bundle.pem:/opt/opencti-connector-webhook/ca_bundle.pem"
